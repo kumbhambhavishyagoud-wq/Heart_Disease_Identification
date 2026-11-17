@@ -1,0 +1,2 @@
+{% extends "base.html" %}{% block title %}Dataset Preview{% endblock %}{% block content %}
+<section class="plain"><h1>PREVIEW</h1><p>{{total}} records found. Showing first {{rows|length}} rows.</p><div class="tablebox"><table><thead><tr>{% for c in columns %}<th>{{c}}</th>{% endfor %}</tr></thead><tbody>{% for row in rows %}<tr>{% for v in row %}<td>{{v}}</td>{% endfor %}</tr>{% endfor %}</tbody></table></div><a class="btn" href="/training">BACK TO TRAINING</a></section>{% endblock %}

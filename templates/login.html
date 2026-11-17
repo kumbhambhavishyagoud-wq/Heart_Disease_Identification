@@ -1,0 +1,13 @@
+{% extends "base.html" %}{% block title %}Login{% endblock %}{% block content %}
+<section class="login-bg">
+    <form class="login-card" method="post">
+        <h1>Login HERE</h1><label>Username<input name="username" required
+                placeholder="Enter username"></label><label>Password<input name="password" type="password" required
+                placeholder="Enter password"></label><button class="btn" type="submit">LOGIN</button>
+        <p class="demo">
+      Password must have <b>8+ chars</b>, an <b>uppercase</b>, a <b>lowercase</b>, a <b>number</b>, and a <b>special symbol</b>.<br><br>
+      Create New Account <a href="{{ url_for('signin') }}"><b>SignIn here</b></a>
+    </p>
+    </form>
+    
+</section>{% endblock %}

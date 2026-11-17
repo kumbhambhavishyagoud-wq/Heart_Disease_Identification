@@ -1,0 +1,2 @@
+{% extends "base.html" %}{% block title %}Prediction History{% endblock %}{% block content %}
+<section class="plain"><h1>Prediction History</h1>{% if rows %}<table><tr><th>Date</th><th>Model result</th><th>Positive-class probability</th></tr>{% for r in rows %}<tr><td>{{r[0]}}</td><td>{{r[1]}}</td><td>{{(r[2]*100)|round(1)}}%</td></tr>{% endfor %}</table>{% else %}<p>No predictions have been saved yet.</p>{% endif %}</section>{% endblock %}

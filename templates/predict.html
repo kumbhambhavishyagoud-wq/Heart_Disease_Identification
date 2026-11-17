@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% block title %}Heart Disease Predictor{% endblock %}{% block content %}
+<section class="predict-wrap"><div class="heart-illustration"><div class="heart-symbol">♥</div><p>HEART HEALTH</p></div><form class="predict-card" method="post"><h1>Heart Disease Predictor</h1><p class="sub">Enter the patient's medical history</p>
+{% for f in fields %}<label>{{f.label}}{% if f.kind=="select" %}<select name="{{f.name}}" required>{% for val,text in f.options %}<option value="{{val}}">{{text}}</option>{% endfor %}</select>{% else %}<input name="{{f.name}}" type="number" step="any" min="{{f.min}}" max="{{f.max}}" placeholder="{{f.placeholder}}" required>{% endif %}</label>{% endfor %}
+<button class="btn green" type="submit">Predict →</button></form></section>{% endblock %}

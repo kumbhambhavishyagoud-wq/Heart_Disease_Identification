@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap');
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: #f5f7fa;
+    color: #263747;
+    font-family: Montserrat, Arial, sans-serif
+}
+
+.nav {
+    height: auto;
+    min-height: 68px;
+    background: #293c4e;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    gap: 20px
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: .6px
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 22px
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600
+}
+
+.links a:hover {
+    color: #ffb5b9
+}
+
+.menu {
+    display: none;
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 25px
+}
+
+.hero {
+    min-height: 570px;
+    background: linear-gradient(90deg, rgba(0, 52, 70, .87), rgba(0, 70, 83, .28)), url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1800&q=85') center/cover;
+    display: flex;
+    align-items: center;
+    padding: 7% 10%;
+    color: white
+}
+
+.hero-copy {
+    max-width: 650px
+}
+
+.kicker {
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #f27b83
+}
+
+.hero h1 {
+    font-size: clamp(44px, 7vw, 78px);
+    line-height: 1.04;
+    margin: 15px 0;
+    font-weight: 800
+}
+
+.hero p {
+    line-height: 1.8;
+    max-width: 580px;
+    font-size: 15px
+}
+
+.btn {
+    display: inline-block;
+    border: 0;
+    border-radius: 5px;
+    background: #f04b52;
+    color: white;
+    text-decoration: none;
+    padding: 13px 25px;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .5px;
+    cursor: pointer;
+    margin-top: 15px
+}
+
+.btn:hover {
+    filter: brightness(.93)
+}
+
+.intro {
+    text-align: center;
+    padding: 55px 20px;
+    background: white
+}
+
+.intro p {
+    max-width: 780px;
+    margin: 15px auto;
+    color: #71808d;
+    line-height: 1.8
+}
+
+.textlink {
+    display: inline-block;
+    color: #e74b54;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 18px 0
+}
+
+.login-bg {
+    min-height: calc(100vh - 125px);
+    background: linear-gradient(#ffffff9c, #ffffffb5), url('https://images.unsplash.com/photo-1504439904031-93abd827e6ba?auto=format&fit=crop&w=1600&q=80') center/cover;
+    display: grid;
+    place-items: center;
+    padding: 35px
+}
+
+.login-card {
+    width: min(390px, 100%);
+    background: #ffffffd9;
+    padding: 35px 38px;
+    border-radius: 8px;
+    box-shadow: 0 10px 35px #142b3b30
+}
+
+.login-card h1 {
+    text-align: center;
+    font-family: 'Playfair Display', serif
+}
+
+.login-card label,
+.predict-card label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 18px 0
+}
+
+.login-card input,
+.predict-card input,
+.predict-card select {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #d9e0e5;
+    background: #f5f5f5;
+    margin-top: 7px;
+    border-radius: 3px;
+    font: 13px Montserrat
+}
+
+.demo,
+.small {
+    font-size: 10px;
+    color: #71808d;
+    line-height: 1.7
+}
+
+.abstract-bg {
+    min-height: calc(100vh - 125px);
+    padding: 55px 6%;
+    background: linear-gradient(#0008, #0008), url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1600&q=85') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.abstract-card {
+    max-width: 900px;
+    background: #101a20c9;
+    color: #fff;
+    padding: 42px 50px;
+    text-align: center
+}
+
+.abstract-card h1 {
+    letter-spacing: 2px
+}
+
+.abstract-card p:not(.kicker) {
+    font-size: 13px;
+    line-height: 1.9;
+    color: #e4e8eb;
+    text-align: justify
+}
+
+.training-bg {
+    min-height: calc(100vh - 125px);
+    padding: 55px 20px;
+    background: linear-gradient(135deg, #202d48dd, #5d3555dd), url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1600&q=80') center/cover;
+    display: grid;
+    place-items: center
+}
+
+.training-card {
+    width: min(800px, 100%);
+    background: #ffffffed;
+    padding: 38px;
+    border-radius: 8px;
+    text-align: center
+}
+
+.training-card h1 {
+    letter-spacing: 2px
+}
+
+.training-card input[type=file] {
+    display: block;
+    margin: 25px auto;
+    padding: 12px;
+    background: #eee;
+    max-width: 100%
+}
+
+.secondary {
+    background: #1727df
+}
+
+.ready {
+    color: #27814e;
+    font-weight: 700
+}
+
+.report {
+    margin: 25px 0;
+    text-align: left;
+    overflow: auto
+}
+
+.report table,
+.plain table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 12px
+}
+
+.report td,
+.report th,
+.plain td,
+.plain th {
+    padding: 10px;
+    border: 1px solid #dce2e6;
+    text-align: left
+}
+
+.plain {
+    padding: 45px 5%;
+    min-height: 75vh;
+    background: white
+}
+
+.plain h1 {
+    text-align: center
+}
+
+.tablebox {
+    overflow: auto;
+    margin: 25px 0
+}
+
+.predict-wrap {
+    min-height: calc(100vh - 125px);
+    background: linear-gradient(90deg, #0877ed, #08b9df);
+    padding: 35px 7%;
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 35px;
+    align-items: center
+}
+
+.heart-illustration {
+    text-align: center;
+    color: white
+}
+
+.heart-symbol {
+    font-size: 190px;
+    color: #d93e43;
+    text-shadow: 8px 8px 0 #8d1f35;
+    line-height: 1
+}
+
+.heart-illustration p {
+    font-size: 11px;
+    letter-spacing: 3px
+}
+
+.predict-card {
+    background: white;
+    padding: 28px 8%;
+    border-radius: 5px;
+    max-width: 610px;
+    width: 100%;
+    margin: auto
+}
+
+.predict-card h1 {
+    text-align: center;
+    font-size: 23px
+}
+
+.predict-card .sub {
+    text-align: center;
+    color: #82909b;
+    font-size: 11px
+}
+
+.predict-card label {
+    margin: 12px 0
+}
+
+.predict-card input,
+.predict-card select {
+    padding: 9px;
+    margin-top: 5px
+}
+
+.green {
+    background: #54b94d;
+    display: block;
+    margin: 20px auto 0;
+    min-width: 160px
+}
+
+.result-wrap {
+    min-height: calc(100vh - 125px);
+    background: linear-gradient(90deg, #0877ed, #08b9df);
+    display: grid;
+    place-items: center;
+    padding: 35px
+}
+
+.result-card {
+    width: min(750px, 100%);
+    background: white;
+    border-radius: 5px;
+    padding: 45px;
+    text-align: center
+}
+
+.result-heart {
+    font-size: 75px;
+    color: #d8424d
+}
+
+.result-card h1 {
+    font-size: 25px
+}
+
+.message {
+    background: #eee;
+    border-radius: 7px;
+    padding: 20px;
+    line-height: 1.7;
+    margin: 25px auto;
+    max-width: 500px;
+    font-size: 14px
+}
+
+.prob {
+    font-size: 13px;
+    color: #53616b
+}
+
+.disclaimer {
+    font-size: 10px;
+    line-height: 1.6;
+    color: #84909a;
+    margin-top: 25px
+}
+
+footer {
+    background: #1e2b37;
+    color: #aab5be;
+    text-align: center;
+    padding: 20px;
+    font-size: 10px
+}
+
+.flash {
+    padding: 12px 5%;
+    font-size: 13px
+}
+
+.flash.success {
+    background: #e5f7eb;
+    color: #216a3b
+}
+
+.flash.error {
+    background: #fff0f0;
+    color: #a12f38
+}
+
+@media(max-width:760px) {
+    .menu {
+        display: block
+    }
+
+    .links {
+        display: none;
+        position: absolute;
+        z-index: 10;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: #293c4e;
+        padding: 18px;
+        flex-direction: column
+    }
+
+    .links.show {
+        display: flex
+    }
+
+    .hero {
+        min-height: 480px
+    }
+
+    .predict-wrap {
+        grid-template-columns: 1fr;
+        padding: 25px 5%
+    }
+
+    .heart-symbol {
+        font-size: 100px
+    }
+
+    .predict-card {
+        padding: 25px
+    }
+
+    .abstract-card {
+        padding: 28px 22px
+    }
+
+    .training-card {
+        padding: 25px
+    }
+}

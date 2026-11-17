@@ -1,0 +1,18 @@
+{% extends "base.html" %}{% block title %}Abstract{% endblock %}{% block content %}
+<section class="abstract-bg">
+    <article class="abstract-card">
+        <p class="kicker">PROJECT OVERVIEW</p>
+        <h1>ABSTRACT</h1>
+        <p>Heart disease is one of the major health concerns worldwide. Early identification of possible risk patterns
+            can support timely medical consultation. This project presents a machine-learning-based approach for heart
+            disease identification using patient medical-history measurements.</p>
+        <p>The system accepts a labelled heart-disease dataset, prepares the data, trains and tests classification
+            algorithms, and compares their performance. The trained model is then used to analyse the seven patient
+            attributes displayed in the prediction form: chest pain type, resting blood pressure, serum cholesterol,
+            fasting blood sugar, resting electrocardiographic result, maximum heart rate achieved and exercise-induced
+            angina.</p>
+        <p>The application provides a simple interface for dataset upload, dataset preview, model training,
+            patient-value entry and prediction display. The output is an educational model estimate and is not a
+            substitute for clinical diagnosis.</p><a class="btn" href="/training">CONTINUE TO TRAINING →</a>
+    </article>
+</section>{% endblock %}

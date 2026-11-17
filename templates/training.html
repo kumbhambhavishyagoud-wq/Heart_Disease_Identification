@@ -1,0 +1,39 @@
+{% extends "base.html" %}{% block title %}Training{% endblock %}{% block content %}
+<section class="training-bg">
+    <a href="/">Back</a>
+    <div class="training-card">
+        <p class="kicker">MACHINE LEARNING</p>
+        <h1>UPLOAD DATASET</h1>
+        <p>Choose the labelled heart disease CSV file to use for training.</p>
+        <form method="post" enctype="multipart/form-data"><input type="file" name="dataset" accept=".csv"
+                required><button class="btn" type="submit">UPLOAD DATASET</button></form>
+        <p class="small">Required dataset columns: cp, trestbps, chol, fbs, restecg, thalach, exang and target. Other
+            columns such as age and sex may also be present; the model uses the seven predictor fields shown in the
+            reference form.</p>
+        {% if model_ready %}<p class="ready">A trained model is available.</p>
+        <a href="/predict">Get Your Prediction Now</a>
+        {% endif %}
+        {% if report %}<div class="report">
+            <h2>Training and testing results</h2>
+            <p>Records: {{report.records}} · Test split: {{report.test_percent}}% · Selected model:
+                {{report.selected_model}} · Accuracy: {{report.selected_model_accuracy}}%</p>
+            <table>
+                <tr>
+                    <th>Algorithm</th>
+                    <th>Accuracy</th>
+                    <th>Precision</th>
+                    <th>Recall</th>
+                    <th>F1</th>
+                </tr>{% for r in report.results %}<tr>
+                    <td>{{r.algorithm}}</td>
+                    <td>{{r.accuracy}}%</td>
+                    <td>{{r.precision}}%</td>
+                    <td>{{r.recall}}%</td>
+                    <td>{{r.f1}}%</td>
+                </tr>{% endfor %}
+            </table>
+        </div>{% endif %}
+        <form action="/train-model" method="post"><button class="btn secondary" type="submit">CLICK TO TRAIN |
+                TEST</button></form><a class="textlink" href="/preview">Preview uploaded dataset →</a>
+    </div>
+</section>{% endblock %}
